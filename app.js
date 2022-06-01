@@ -19,7 +19,7 @@ app.get('/', (req, res) => {
 });
 
 app.post('/', (req, res) => {
-	console.log(req);
+	console.log(req.body);
 
 	res.sendStatus(200);
 });
