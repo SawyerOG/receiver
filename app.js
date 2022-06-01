@@ -1,9 +1,17 @@
-const express = require('express'),
-	app = express(),
-	cors = require('cors');
+import express, { json } from 'express';
+import cors from 'cors';
+import { readFileSync } from 'fs';
+import https from 'https';
 
-app.use(express.json());
+const app = express();
+
+app.use(json());
 app.use(cors());
+
+const options = {
+	key: readFileSync('./key.pem', 'utf-8'),
+	cert: readFileSync('./server.crt', 'utf-8'),
+};
 
 app.get('/', (req, res) => {
 	console.log('get hit');
@@ -16,4 +24,6 @@ app.post('/', (req, res) => {
 	res.sendStatus(200);
 });
 
-app.listen(4001, () => console.log('listening'));
+const httpsServer = https.createServer(options, app);
+
+httpsServer.listen(4001, () => console.log('listening'));
