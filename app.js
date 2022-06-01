@@ -21,11 +21,11 @@ app.get('/', (req, res) => {
 app.post('/', (req, res) => {
 	console.log(req.body);
 
-	res.sendStatus(200);
+	res.sendStatus(201);
 });
 
 // const httpsServer = https.createServer(options, app);
 
 // httpsServer.listen(4001, () => console.log('listening'));
 
-app.listen(4001, () => console.log('listening'));
+app.listen(443, () => console.log('listening'));
