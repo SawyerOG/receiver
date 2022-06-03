@@ -17,6 +17,10 @@ app.get('/', (req, res) => {
 	console.log('get hit');
 	res.sendStatus(200);
 });
+app.get('/docusign', (req, res) => {
+	console.log('DOCUSIGN get hit!!!!!');
+	res.sendStatus(200);
+});
 
 app.post('/', (req, res) => {
 	console.log(req.body);
