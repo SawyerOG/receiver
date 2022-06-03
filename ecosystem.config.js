@@ -1,7 +1,7 @@
 module.exports = {
 	apps: [
 		{
-			name: 'ape',
+			name: 'receiver',
 			script: 'app.js',
 			env_production: {
 				NODE_ENV: 'production',
