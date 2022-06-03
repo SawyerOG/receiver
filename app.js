@@ -1,11 +1,11 @@
-import express, { json } from 'express';
-import cors from 'cors';
+const express = require('express');
+const cors = require('cors');
 // import { readFileSync } from 'fs';
 // import https from 'https';
 
 const app = express();
 
-app.use(json());
+app.use(express.json());
 app.use(cors());
 
 // const options = {

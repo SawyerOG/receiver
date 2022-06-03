@@ -15,6 +15,5 @@
 	},
 	"scripts": {
 		"start": "nodemon app.js"
-	},
-	"type": "module"
+	}
 }
