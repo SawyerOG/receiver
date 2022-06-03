@@ -1,5 +1,6 @@
 const express = require('express');
 const cors = require('cors');
+const { default: axios } = require('axios');
 // import { readFileSync } from 'fs';
 // import https from 'https';
 
@@ -31,7 +32,9 @@ app.post('/docusign', (req, res) => {
 	console.log('POSTED TO /docusign');
 	console.log(req.body);
 
-	res.sendStatus(201);
+	axios.post('http://localhost:4000/api/ds/receiveEnv', req.body);
+
+	res.sendStatus(200);
 });
 
 // const httpsServer = https.createServer(options, app);
