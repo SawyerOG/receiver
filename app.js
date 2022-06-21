@@ -40,6 +40,7 @@ app.post('/docusign', (req, res) => {
 app.post('/timeoff_request', (req, res) => {
 	console.log('POSTED TO time off request post');
 
+	console.log(req.headers);
 	console.log(req.body);
 	res.sendStatus(200);
 });
