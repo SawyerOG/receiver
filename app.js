@@ -37,6 +37,12 @@ app.post('/docusign', (req, res) => {
 	res.sendStatus(200);
 });
 
+app.post('/timeoff_request', (req, res) => {
+	console.log('POSTED TO time off request post');
+
+	console.log(req.body);
+	res.sendStatus(200);
+});
 // const httpsServer = https.createServer(options, app);
 
 // httpsServer.listen(4001, () => console.log('listening'));
