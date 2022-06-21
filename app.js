@@ -31,6 +31,8 @@ app.post('/', (req, res) => {
 app.post('/docusign', (req, res) => {
 	console.log('POSTED TO /docusign');
 	console.log(req.body);
+	console.log(req.params);
+	console.log(req.query);
 
 	axios.post('http://localhost:4000/api/ds/receiveEnv', req.body);
 
